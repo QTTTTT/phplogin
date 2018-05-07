@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>注册</title>
+</head>
+<body>
+	
+	<form action="register.php" method="post" enctype="multipart/form-data" id="fm1" accept-charset="UTF-8">
+	姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名: <input type="text" name="name"><br>
+	密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码: <input type="password" name="passwd"><br>
+	确认密码: <input type="password" name="repasswd"><br>
+	学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号: <input type="text" name="number"><br>
+	成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;绩: <input type="text" name="grade"><br>
+	班&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;级: <SELECT name="class">
+		<option value="class1" selected>class1</option>
+		<option value="class2">class2</option>
+		<option value="class3">class3</option>
+		</SELECT><br>
+	性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别:
+		<input type="radio" name="gender" value="female">Female
+		<input type="radio" name="gender" value="male">Male<br>
+	<!-- <br> -->
+
+	<div>
+		<input type="file"  id = "file" name="file" /> <br>
+		<img style="width: 100px" src="" id="img"/><br>
+	</div>
+
+	兴&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;趣:
+		<input type="checkbox" name="internet[]" value="basketball" checked="checked" />basketball
+		<input type="checkbox" name="internet[]" value="swim" />swim
+		<input type="checkbox" name="internet[]" value="music" />music<br />
+	<input type="submit">
+	<input type="button" onclick="formReset()" value="重置">
+	</form>
+
+	<script type="text/javascript">
+		//显示文件
+var file_Binary,file_Binary_head;
+var filename = document.getElementById('file');
+filename.addEventListener("change",function(){
+var reader = new FileReader();
+var img = document.getElementById("img");
+reader.readAsDataURL(filename.files[0]);//发起异步请求
+reader.onload = function(){
+//读取完成后，数据保存在对象的result属性中
+img.src = this.result;
+}
+})
+	</script> 
+<script type="text/javascript">
+function formReset()
+{
+document.getElementById("fm1").reset();
+}
+</script>
+</body>
+</html>

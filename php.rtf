@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset134 STSongti-SC-Regular;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\fnil\fcharset134 PingFangSC-Regular;\f4\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red242\green242\blue242;\red135\green135\blue135;
+\red251\green0\blue7;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c96078\c96078\c96078;\cssrgb\c60000\c60000\c60000;
+\cssrgb\c100000\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 $x = 5985;\
+var_dump($x);\
+
+\f1 \'b7\'b5\'bb\'d8\'b1\'e4\'c1\'bf\'b5\'c4\'ca\'fd\'be\'dd\'c0\'e0\'d0\'cd\'ba\'cd\'d6\'b5\
+
+\f0 \
+$cars=array("Volvo","BMW","SAAB");\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 class Car\
+\{\
+  var $color;\
+  function Car($color="green") \{\
+    $this->color = $color;\
+  \}\
+  function what_color() \{\
+    return $this->color;\
+  \}\
+\}\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 echo strpos("Hello world!","world");\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 //6\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 echo strlen("Hello world!");\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 //12\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 $a = "Hello";\
+$b = $a . " world!";\
+echo $b; \cf4 \strokec4 // 
+\f1 \'ca\'e4\'b3\'f6
+\f0  Hello world!\cf2 \strokec2 \
+\
+$x="Hello";\
+$x .= " world!";\
+echo $x; \cf4 \strokec4 // 
+\f1 \'ca\'e4\'b3\'f6
+\f0  Hello world!\cf2 \strokec2 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f2\fs26 \cf5 \cb1 \strokec5 $x = array("a" => "red", "b" => "green"); \
+$y = array("c" => "blue", "d" => "yellow"); \
+$z = $x + $y; // $x 
+\f3 \'d3\'eb
+\f2  $y 
+\f3 \'b5\'c4\'c1\'aa\'ba\'cf
+\f2 \cf2 \strokec2 \
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f3\fs24 \cf2 array(4) \{ ["a"]=> string(3) "red" ["b"]=> string(5) "green" ["c"]=> string(4) "blue" ["d"]=> string(6) "yellow" \}\uc0\u160 \
+
+\f0\fs28 \cb3 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf2 function familyName($fname,$year) \{\
+  echo "$fname Zhang. Born in $year <br>";\
+\}\
+\
+familyName("Li","1975");\
+familyName("Hong","1978");\
+familyName("Tao","1983");\
+\
+
+\f1 \'b7\'b5\'bb\'d8\'d6\'b5
+\f0 \
+function sum($x,$y) \{\
+  $z=$x+$y;\
+  return $z;\
+\}\
+echo "5 + 10 = " . sum(5,10) . "<br>";\
+echo "7 + 13 = " . sum(7,13) . "<br>";\
+echo "2 + 4 = " . sum(2,4);\
+\
+
+\f1 \'b9\'d8\'c1\'aa\'ca\'fd\'d7\'e9
+\f0 \
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");\
+$age['Peter']="35";\
+$age['Ben']="37";\
+$age['Joe']="43";\
+
+\f3\b \'b1\'e9\'c0\'fa
+\f4\b0 \
+
+\f0 $age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");\
+\
+foreach($age as $x=>$x_value) \{\
+  echo "Key=" . $x . ", Value=" . $x_value;\
+  echo "<br>";\
+\}\
+}

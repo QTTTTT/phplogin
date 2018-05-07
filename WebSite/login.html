@@ -1,0 +1,52 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+</head>
+<body>
+	<div id="rootloginFrom" hidden="true">
+	<form  action="rootquery.php" method="post" enctype="multipart/form-data" >  
+                     <div>  
+                        <h2>管理员登录</h2>  
+                        <span><label>用户名</label></span>  
+                        <span><input type="text" id="rootloginname" name="rootloginnumber" onkeypress="if(event.keyCode==13){ doLogin()};" class="validate[require] textbox" maxlength="15"/></span>  
+                     </div>  
+                     <div>  
+                        <span><label>密码</label></span>  
+                        <span><input type="password" id="rootloginpass" name="rootloginpass" onkeypress="if(event.keyCode==13){ doLogin()};" class="validate[require] password " maxlength="15"/></span>  
+                     </div>  
+                    <div class="sign">  
+                        <input type="button" value="我是用户" class="submit" onclick="change_user();" />  
+                        <input type="submit" value="登录" />  
+                    </div>  
+    </form>  </div>
+    <div id="userloginFrom">
+    <form action="query.php" method="post" enctype="multipart/form-data" >  
+                     <div>  
+                        <h2>用户登录</h2>  
+                        <span><label>学号</label></span>  
+                        <span><input type="text" id="userloginname" name="userloginnumber" onkeypress="if(event.keyCode==13){ doLogin()};" class="validate[require] textbox" maxlength="15"/></span>  
+                     </div>  
+                     <div>  
+                        <span><label>密码</label></span>  
+                        <span><input type="password" id="userloginpass" name="userloginpass" onkeypress="if(event.keyCode==13){ doLogin()};" class="validate[require] password " maxlength="15"/></span>  
+                     </div>  
+                    <div class="sign">  
+                        <input type="button" value="我是管理员" class="submit" onclick="change_root();" />  
+                        <input type="submit" value="登录" />  
+                    </div>  
+    </form>  </div>
+<script type="text/javascript">
+	function change_user(){
+		document.getElementById("rootloginFrom").style.display="none";
+		document.getElementById("userloginFrom").style.display="block";
+	}
+	function change_root(){
+		document.getElementById("rootloginFrom").style.display="block";
+		document.getElementById("userloginFrom").style.display="none";
+	}
+</script>
+</body>
+</html>
